@@ -1,0 +1,46 @@
+.day-night {
+  height: 60vh;
+  max-width: 900px;
+  margin: 1rem auto;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  font-family: system-ui, sans-serif;
+
+  background: #fff;   /* Day */
+  color: #000;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+/* Night mode */
+.day-night.night {
+  background: #000;
+  color: #fff;
+}
+
+.dn-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: clamp(40px, 10vw, 72px);
+}
+
+/* Кнопка выглядит одинаково в обоих режимах */
+.dn-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.dn-btn:hover { opacity: 0.9; }
+.dn-btn:focus-visible {
+  outline: 2px solid #999;
+  outline-offset: 2px;
+}
